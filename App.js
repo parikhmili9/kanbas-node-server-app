@@ -1,5 +1,6 @@
 import express from 'express';
-import Hello from "./Hello.js"
+// import Hello from "./Hello.js"
+import mongoose from "mongoose";
 import Lab5 from './Lab5.js';
 import CourseRoutes from "./Kanbas/courses/routes.js";
 import ModuleRoutes from './Kanbas/modules/routes.js';
@@ -11,6 +12,7 @@ app.use(express.json());
 // Hello(app);
 Lab5(app);
 app.use(cors());
+mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 // app.use(cors({origin: true, credentials: true}));
 CourseRoutes(app);
 ModuleRoutes(app);
