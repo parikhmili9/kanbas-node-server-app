@@ -13,7 +13,7 @@ app.use(express.json());
 // Hello(app);
 Lab5(app);
 app.use(cors());
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
+mongoose.connect("mongodb://127.0.0.1:27017/Kanbas");
 // app.use(cors({origin: true, credentials: true}));
 CourseRoutes(app);
 ModuleRoutes(app);
