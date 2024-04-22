@@ -73,7 +73,6 @@ export default async function UserRoutes(app) {
 
   const signout = (req, res) => {
     req.session.destroy();
-    // currentUser = null;
     res.sendStatus(200);
   };
 
